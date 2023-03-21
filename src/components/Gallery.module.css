@@ -1,0 +1,150 @@
+.recent {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.recent_blogs {
+  display: flex;
+  align-items: center;
+  color: #42240c;
+}
+.recent_h2 {
+  margin-left: 5px;
+}
+.lines {
+  margin: 5px;
+  display: flex;
+  align-items: center;
+}
+.line {
+  margin: 5px;
+}
+.blog_list {
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 5rem;
+  align-items: start;
+}
+.article {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  margin: 2rem auto 0 auto;
+  color: #fff8f8;
+  display: grid;
+  width: 400px;
+  height: min-content;
+  background: #f64b3c;
+  border-radius: 1em;
+  box-shadow: 2px 5px 5px #42240c25;
+}
+.blog_banner {
+  width: 400px;
+  border-radius: 1em 1em 0 0;
+  position: relative;
+}
+.blog_category {
+  transform: translateZ(20px);
+  margin: 1rem 1rem 0 1rem;
+}
+.blog_category_a {
+  transform: translateZ(20px);
+  text-align: center;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.8rem;
+  background: #fcc8bd;
+  color: #42240c;
+  border-radius: 2rem;
+  font-family: "Poppins SemiBold", sans-serif;
+}
+.blog_title {
+  transform: translateZ(20px);
+  padding: 0.5rem 1rem;
+}
+.blog_title_a {
+  color: #fff8f8;
+}
+.content {
+  transform: translateZ(20px);
+  padding: 0 1rem;
+  font-size: 0.9rem;
+  font-family: "Poppins Regular", sans-serif;
+  opacity: 0.8;
+}
+.profile_picture {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.blog_footer {
+  transform: translateZ(20px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.user_info {
+  display: flex;
+  align-items: center;
+}
+.name_time {
+  margin: 0 5px;
+  font-size: 13px;
+}
+.user_name {
+  font-family: "Poppins SemiBold", sans-serif;
+  color: #fff8f8;
+}
+.created_at {
+  font-family: "Poppins Regular", sans-serif;
+  opacity: 0.8;
+}
+.read_more {
+  display: flex;
+  align-items: center;
+}
+.read_more_p {
+  color: #fff8f8;
+  font-family: "Poppins Regular", sans-serif;
+  font-size: 0.9rem;
+  margin: 0.2rem;
+}
+.art {
+  border-radius: 0.5rem;
+}
+.image_container {
+  border-radius: 0.5rem;
+}
+.art:hover {
+  opacity: 0.5;
+}
+.image_container:hover {
+  background: white;
+}
+.my_masonry_grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
+.my_masonry_grid_column {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.my_masonry_grid_column > div {
+  /* change div to reference your elements you put in <Masonry> */
+
+  margin-bottom: 30px;
+}
+.zoom_icon {
+  position: relative;
+  top: 50%;
+  left: 50%;
+}
