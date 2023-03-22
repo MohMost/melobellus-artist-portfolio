@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "host": "vite --host"
+    "host": "vite --hos t"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
