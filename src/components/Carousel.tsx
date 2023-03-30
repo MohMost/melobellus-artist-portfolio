@@ -16,7 +16,7 @@ function Carousel({ onClose, currentNum }: any) {
   ];
   useEffect(() => {
     setCurrentImage(currentNum);
-  }, [CurrentImage]);
+  }, []);
   return (
     <div className={classes.carousel} onClick={onClose}>
       <svg
