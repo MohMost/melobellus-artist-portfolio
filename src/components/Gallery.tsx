@@ -1,66 +1,71 @@
 import classes from "./Gallery.module.css";
-import Grid from "@mui/material/Grid";
 import Masonry from "react-masonry-css";
-import ZoomInIcon from "@mui/icons-material/ZoomIn";
-export default function BlogList() {
+import Modal from "./Modal";
+import Carousel from "./Carousel";
+import { useState } from "react";
+export default function Gallery() {
+  const [modalIsVisible, setModalIsVisible] = useState(false);
+  const [index, setIndex] = useState(null);
   const breakpointColumnsObj = {
     default: 3,
     1100: 2,
     700: 1,
   };
+
+  const imgUrls = [
+    "/2.png",
+    "/1.jpg",
+    "/3.jpg",
+    "/4.jpg",
+    "/5.jpg",
+    "/9.png",
+    "/7.jpg",
+    "/8.jpg",
+    "/6.jpg",
+  ];
+  function showModalHandler(e: any) {
+    setModalIsVisible(true);
+    const clickedIndex: any = parseInt(e.target.getAttribute("alt"));
+    setIndex(clickedIndex);
+  }
+
+  function hideModalHandler(e: any) {
+    e.stopPropagation();
+    setModalIsVisible(false);
+  }
   return (
-    <div>
+    <>
+      {modalIsVisible && (
+        <Modal>
+          <Carousel currentNum={index} onClose={hideModalHandler} />
+        </Modal>
+      )}
       <Masonry
         breakpointCols={breakpointColumnsObj}
         className={classes.my_masonry_grid}
         columnClassName={classes.my_masonry_grid_column}
       >
-        <div>
-          <a href="">
-            <img className={classes.art} width="100%" src="/4.jpg" alt="" />
-          </a>
-        </div>
-        <div>
-          <a href="">
-            <img className={classes.art} width="100%" src="/2.png" alt="" />
-          </a>
-        </div>
-        <div>
-          <a href="">
-            <img className={classes.art} width="100%" src="/3.jpg" alt="" />
-          </a>
-        </div>
-        <div>
-          <a href="">
-            <img className={classes.art} width="100%" src="/1.png" alt="" />
-          </a>
-        </div>
-        <div>
-          <a href="">
-            <img className={classes.art} width="100%" src="/5.jpg" alt="" />
-          </a>
-        </div>
-        <div>
-          <a href="">
-            <img className={classes.art} width="100%" src="/6.jpg" alt="" />
-          </a>
-        </div>
-        <div>
-          <a href="">
-            <img className={classes.art} width="100%" src="/7.jpg" alt="" />
-          </a>
-        </div>
-        <div>
-          <a href="">
-            <img className={classes.art} width="100%" src="/8.jpg" alt="" />
-          </a>
-        </div>
-        <div>
-          <a href="">
-            <img className={classes.art} width="100%" src="/9.png" alt="" />
-          </a>
-        </div>
+        {imgUrls.map((imgUrl) => {
+          return (
+            <div className={classes.image_container} onClick={showModalHandler}>
+              <img
+                key={imgUrls.indexOf(imgUrl)}
+                className={classes.art}
+                width="100%"
+                src={imgUrl}
+                alt={`${imgUrls.indexOf(imgUrl)}`}
+              />
+              <div className={classes.zoomIn}>
+                <img
+                  className={classes.zoomInIcon}
+                  src="./zoom_in.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          );
+        })}
       </Masonry>
-    </div>
+    </>
   );
 }

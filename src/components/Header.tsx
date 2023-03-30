@@ -25,7 +25,6 @@ export default function Header() {
             <a href="">
               <img className={classes.li} src="/facebook.svg" alt="" />
             </a>
-
             <a href="">
               <img className={classes.li} src="/behance.svg" alt="" />
             </a>
