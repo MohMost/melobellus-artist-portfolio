@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import classes from "./Carousel.module.css";
 
-function Carousel({ url, onClose, currentNum }: any) {
+function Carousel({ onClose, currentNum }: any) {
   const [CurrentImage, setCurrentImage] = useState(currentNum);
   const imgUrls = [
     "/2.png",
@@ -16,7 +16,7 @@ function Carousel({ url, onClose, currentNum }: any) {
   ];
   useEffect(() => {
     setCurrentImage(currentNum);
-  }, []);
+  }, [CurrentImage]);
   return (
     <div className={classes.carousel} onClick={onClose}>
       <svg
