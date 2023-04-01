@@ -1,5 +1,6 @@
 import { useState } from "react";
 import classes from "./Navbar.module.css";
+import Button from "./Button";
 export default function Navbar() {
   return (
     <div className={classes.navbar}>
@@ -16,24 +17,22 @@ export default function Navbar() {
             </a>
           </li>
           <li className={classes.links_li}>
-            <a className={classes.links_a} href="#">
+            <a className={classes.links_a} href="#about">
               About
             </a>
           </li>
           <li className={classes.links_li}>
-            <a className={classes.links_a} href="#">
+            <a className={classes.links_a} href="#contact">
               Contact
             </a>
           </li>
           <li className={classes.links_li}>
-            <a className={classes.links_a} href="#">
+            <a className={classes.links_a} href="#gallery">
               Gallery
             </a>
           </li>
           <li className={classes.links_li}>
-            <a className={classes.sign_up} href="#">
-              services
-            </a>
+            <Button text="Services"></Button>
           </li>
         </ul>
       </div>

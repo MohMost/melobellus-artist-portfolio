@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "./Navbar";
 import classes from "./Header.module.css";
+import Button from "./Button";
 
 export default function Header() {
   return (
@@ -29,7 +30,9 @@ export default function Header() {
               <img className={classes.li} src="/behance.svg" alt="" />
             </a>
           </section>
-          <a className={classes.btn}>Hire Me</a>
+          <section className={classes.button_container}>
+            <Button text="Hire Me" />
+          </section>
         </div>
         <img
           className={classes.background_banner}

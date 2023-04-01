@@ -1,3 +1,150 @@
 .footer {
   background-image: linear-gradient(#21073c, #110320);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100%;
 }
+.arrow_container:hover rect:nth-of-type(1) {
+  fill: #552389;
+  cursor: pointer;
+}
+.arrow_container {
+  cursor: pointer;
+}
+.ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+}
+.li {
+  transition: all 0.1s ease-in-out;
+  padding: 10%;
+}
+
+.li:hover {
+  transform: scale(1.2);
+}
+.container {
+  padding: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+
+  width: 100%;
+}
+.row1 {
+  color: #9dff8d;
+  position: relative;
+}
+.row2 {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+.phone_mail_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.phone_mail {
+  color: #e7f1e5;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+.row3 {
+  color: #e7f1e5;
+  height: 100%;
+  position: relative;
+  bottom: 2px;
+}
+/*
+ <div className={classes.container}>
+        <h2 className={classes.row1}>Melobellus</h2>
+
+        <div className={classes.row2}>
+          <div className={classes.contacts}>
+            <a className={classes.phone_mail_container} href="tel:123-456-7890">
+              <img src="/phone.svg" alt="" />
+              <span className={classes.phone_mail}>123-456-7890</span>
+            </a>
+            <a
+              className={classes.phone_mail_container}
+              href="mailto:mostefai147@gmail.com"
+            >
+              <img src="/mail.svg" alt="" />
+              <span className={classes.phone_mail}>mostefai147@gmail.com</span>
+            </a>
+          </div>
+          <div className={classes.ul}>
+            <a href="">
+              <img className={classes.li} src="/instagram.svg" alt="" />
+            </a>
+
+            <a href="">
+              <img className={classes.li} src="/facebook.svg" alt="" />
+            </a>
+            <a href="">
+              <img className={classes.li} src="/behance.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <p className={classes.row3}>
+          Developed and designed by{" "}
+          <a href="https://github.com/MohMost" target="_blank">
+            MohMost
+          </a>{" "}
+          © 2023 | All rights reserved.
+        </p>
+      </div>
+
+      <svg
+        className={classes.svg}
+        width="100%"
+        height="auto"
+        viewBox="0 0 1440 350"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <mask id="path-1-inside-1_65_21" fill="white">
+          <path d="M0 65C0 45.67 15.67 30 35 30H1405C1424.33 30 1440 45.67 1440 65V350H0V65Z" />
+        </mask>
+        <path
+          d="M0 65C0 45.67 15.67 30 35 30H1405C1424.33 30 1440 45.67 1440 65V350H0V65Z"
+          fill="#110320"
+        ></path>
+        <path
+          d="M0 65C0 44.5655 16.5655 28 37 28H1403C1423.43 28 1440 44.5655 1440 65C1440 46.7746 1424.33 32 1405 32H35C15.67 32 0 46.7746 0 65ZM1440 350H0H1440ZM0 350V30V350ZM1440 30V350V30Z"
+          fill="#DEFFEB"
+          mask="url(#path-1-inside-1_65_21)"
+        />
+        <a href="#" className={classes.arrow_container}>
+          <rect
+            x="748.586"
+            y="30"
+            width="40.4264"
+            height="40.4264"
+            transform="rotate(135 748.586 30)"
+            fill="#21073C"
+            stroke="#DEFFEB"
+            stroke-width="2"
+          />
+
+          <path
+            d="M719.878 17.7563L732 29.8782L729.879 32.0374L721.393 23.5521V42H718.363V23.5521L709.878 32.0374L707.756 29.8782L719.878 17.7563Z"
+            fill="#DEFFEB"
+          />
+        </a>
+      </svg>
+*/

@@ -12,6 +12,7 @@ function App() {
       <main id="main">
         <Gallery />
         <About />
+        <Contact />
       </main>
       <Footer />
     </>

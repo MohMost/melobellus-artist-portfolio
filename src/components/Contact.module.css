@@ -1,0 +1,49 @@
+.title {
+  color: #9dff8d;
+  font-family: "Inter";
+  font-weight: bold;
+  text-align: center;
+  margin: 3rem;
+  font-size: 2rem;
+}
+.button_container {
+  width: 10rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact {
+  margin: 5rem 0;
+}
+#name {
+  background-color: #deffeb;
+  border: none;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  padding: 0.8rem;
+  width: 20rem;
+}
+#phone {
+  background-color: #deffeb;
+  border: none;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  padding: 0.8rem;
+  width: 20rem;
+}
+#message {
+  background-color: #deffeb;
+  font-family: "inter";
+  border: none;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  padding: 0.8rem;
+  width: 20rem;
+}
