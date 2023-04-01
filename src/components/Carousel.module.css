@@ -22,6 +22,9 @@
   cursor: pointer;
   user-select: none;
 }
+.arrow:hover path:nth-of-type(1) {
+  fill: #552389;
+}
 .centerContainer {
   height: 100vh;
   flex-direction: column;

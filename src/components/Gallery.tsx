@@ -3,17 +3,20 @@ import Masonry from "react-masonry-css";
 import Modal from "./Modal";
 import Carousel from "./Carousel";
 import { useState } from "react";
+
 export default function Gallery() {
   const [modalIsVisible, setModalIsVisible] = useState(false);
   const [index, setIndex] = useState(null);
   const breakpointColumnsObj = {
-    default: 3,
+    default: 4,
+    1300: 3,
     1100: 2,
     700: 1,
   };
 
   const imgUrls = [
     "/2.png",
+    "image.png",
     "/1.jpg",
     "/3.jpg",
     "/4.jpg",
@@ -22,7 +25,9 @@ export default function Gallery() {
     "/7.jpg",
     "/8.jpg",
     "/6.jpg",
+    "/10.png",
   ];
+
   function showModalHandler(e: any) {
     setModalIsVisible(true);
     const clickedIndex: any = parseInt(e.target.getAttribute("alt"));
@@ -34,12 +39,14 @@ export default function Gallery() {
     setModalIsVisible(false);
   }
   return (
-    <>
+    <div className={classes.gallery}>
+      <h2 className={classes.title}>Gallery</h2>
       {modalIsVisible && (
         <Modal>
           <Carousel currentNum={index} onClose={hideModalHandler} />
         </Modal>
       )}
+
       <Masonry
         breakpointCols={breakpointColumnsObj}
         className={classes.my_masonry_grid}
@@ -55,17 +62,10 @@ export default function Gallery() {
                 src={imgUrl}
                 alt={`${imgUrls.indexOf(imgUrl)}`}
               />
-              <div className={classes.zoomIn}>
-                <img
-                  className={classes.zoomInIcon}
-                  src="./zoom_in.svg"
-                  alt=""
-                />
-              </div>
             </div>
           );
         })}
       </Masonry>
-    </>
+    </div>
   );
 }

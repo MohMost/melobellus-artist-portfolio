@@ -5,6 +5,7 @@ function Carousel({ onClose, currentNum }: any) {
   const [CurrentImage, setCurrentImage] = useState(currentNum);
   const imgUrls = [
     "/2.png",
+    "image.png",
     "/1.jpg",
     "/3.jpg",
     "/4.jpg",
@@ -13,6 +14,7 @@ function Carousel({ onClose, currentNum }: any) {
     "/7.jpg",
     "/8.jpg",
     "/6.jpg",
+    "/10.png",
   ];
   useEffect(() => {
     setCurrentImage(currentNum);
