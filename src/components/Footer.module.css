@@ -40,6 +40,9 @@
 .row1 {
   color: #9dff8d;
   position: relative;
+  font-family: "BlueberryDays";
+  font-weight: normal;
+  font-size: 2rem;
 }
 .row2 {
   display: flex;

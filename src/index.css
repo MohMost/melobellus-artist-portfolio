@@ -6,6 +6,14 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+@font-face {
+  font-family: "BlueberryDays";
+  src: url("/BlueberryDays.ttf") format("truetype"),
+    url("/BlueberryDays.woff") format("woff"),
+    url("/BlueberryDays.eot") format("eot");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   background: #21073c;
   font-family: "Poppins";

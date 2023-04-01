@@ -5,8 +5,8 @@ export default function Navbar() {
   return (
     <div className={classes.navbar}>
       <div className={classes.logo}>
-        <a href="">
-          <img src="/melobellus.svg" alt="logo" />
+        <a className={classes.logo_a} href="#">
+          Melobellus
         </a>
       </div>
       <div className={classes.links}>

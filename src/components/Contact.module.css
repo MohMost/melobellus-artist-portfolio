@@ -24,21 +24,28 @@
 }
 #name {
   background-color: #deffeb;
+  font-weight: 600;
+  color: black;
   border: none;
   border-radius: 1rem;
   margin: 0.5rem;
   padding: 0.8rem;
   width: 20rem;
+  font-family: "inter";
 }
 #phone {
+  color: black;
   background-color: #deffeb;
   border: none;
   border-radius: 1rem;
   margin: 0.5rem;
   padding: 0.8rem;
   width: 20rem;
+  font-weight: 600;
+  font-family: "inter";
 }
 #message {
+  color: black;
   background-color: #deffeb;
   font-family: "inter";
   border: none;
@@ -46,4 +53,5 @@
   margin: 0.5rem;
   padding: 0.8rem;
   width: 20rem;
+  font-weight: 600;
 }
