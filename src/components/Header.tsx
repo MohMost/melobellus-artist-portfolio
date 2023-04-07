@@ -20,62 +20,60 @@ export default function Header() {
         <div className={classes.button_icon}>
           <section className={classes.ul}>
             <a href="">
-              <img className={classes.li} src="/instagram.svg" alt="" />
+              <img
+                className={classes.li}
+                src="/instagram.svg"
+                alt="instagram"
+              />
             </a>
 
             <a href="">
-              <img className={classes.li} src="/facebook.svg" alt="" />
+              <img className={classes.li} src="/facebook.svg" alt="facebook" />
             </a>
-            <a href="">
-              <img className={classes.li} src="/behance.svg" alt="" />
+            <a href="https://www.behance.net/Magikaarp">
+              <img className={classes.li} src="/behance.svg" alt="behance" />
             </a>
           </section>
           <section className={classes.button_container}>
             <Button text="Hire Me" />
           </section>
         </div>
-        <img
-          className={classes.background_banner}
-          src="/backgroundbanner.png"
-          alt="backgroundbanner"
-        />
       </div>
-      <svg
-        className={classes.svg}
-        width="100%"
-        height="auto"
-        viewBox="0 0 1439 251"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <mask id="path-1-inside-1_24_3" fill="white">
-          <path d="M0 30H1439V251H0V30Z" />
-        </mask>
-        <path d="M0 30H1439V251H0V30Z" fill="#21073C" />
-        <path
-          d="M0 32H1439V28H0V32Z"
-          fill="#DEFFEB"
-          mask="url(#path-1-inside-1_24_3)"
-        />
-        <a href="#main">
-          <svg className={classes.arrow_container}>
+      <div className={classes.svg_container}>
+        <svg
+          className={classes.svg}
+          width="100%"
+          height="auto"
+          viewBox="0 0 1440 123"
+          preserveAspectRatio="xMidYMid slice"
+        >
+          <mask id="path-1-inside-1_135_10" fill="white">
+            <path d="M0 30H1443V123H0V30Z" />
+          </mask>
+          <path d="M0 30H1443V123H0V30Z" fill="#21073C" />
+          <path
+            d="M0 28H1443V32H0V28ZM1443 123H0H1443ZM0 123V30V123ZM1443 30V123V30Z"
+            fill="#DEFFEB"
+            mask="url(#path-1-inside-1_135_10)"
+          />
+          <a href="#gallery">
             <rect
-              x="690.414"
+              x="691.414"
               y="30"
               width="40.4264"
               height="40.4264"
-              transform="rotate(-45 690.414 30)"
+              transform="rotate(-45 691.414 30)"
               fill="#21073C"
               stroke="#DEFFEB"
               stroke-width="2"
             />
             <path
-              d="M719.075 42.3881L706.953 30.2663L709.074 28.1071L717.559 36.5924V18.1444H720.59V36.5924L729.075 28.1071L731.196 30.2663L719.075 42.3881Z"
+              d="M720.122 42.2437L708 30.1218L710.121 27.9626L718.607 36.4479V18H721.637V36.4479L730.122 27.9626L732.244 30.1218L720.122 42.2437Z"
               fill="#DEFFEB"
             />
-          </svg>
-        </a>
-      </svg>
+          </a>
+        </svg>
+      </div>
     </header>
   );
 }

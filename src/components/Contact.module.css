@@ -3,7 +3,7 @@
   font-family: "Inter";
   font-weight: bold;
   text-align: center;
-  margin: 3rem;
+  margin: 2rem;
   font-size: 2rem;
 }
 .button_container {
@@ -54,4 +54,9 @@
   padding: 0.8rem;
   width: 20rem;
   font-weight: 600;
+}
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 1.5rem;
+  }
 }

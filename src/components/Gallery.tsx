@@ -39,7 +39,7 @@ export default function Gallery() {
     setModalIsVisible(false);
   }
   return (
-    <div className={classes.gallery}>
+    <div id="gallery" className={classes.gallery}>
       <h2 className={classes.title}>Gallery</h2>
       {modalIsVisible && (
         <Modal>

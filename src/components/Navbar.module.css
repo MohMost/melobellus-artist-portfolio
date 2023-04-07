@@ -4,23 +4,26 @@
   width: 100%;
   align-items: center;
   position: relative;
-  padding: 3% 10%;
+  padding: 3rem 10% 0 10%;
 }
 .links_ul {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .links_li {
   position: relative;
   display: flex;
   margin: 0 3rem;
+  align-items: center;
+  justify-content: center;
 }
 .links_a {
   text-decoration: none;
   color: #e7f1e5;
   font-family: "inter";
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.3rem;
 }
 .sign_up {
   text-decoration: none;
@@ -43,6 +46,32 @@
 .logo_a {
   color: #9dff8d;
   font-size: 2rem;
-  font-family: "BlueberryDays";
-  font-weight: 100;
+  font-family: "Inter";
+  font-weight: 600;
+}
+.menu {
+  display: none;
+}
+@media screen and (max-width: 1330px) {
+  .links_li {
+    margin: 0 2rem;
+  }
+  .links_a {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .logo_a {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 960px) {
+  .links_ul {
+    display: none;
+  }
+  .menu {
+    display: flex;
+    position: relative;
+    display: inline-block;
+  }
 }

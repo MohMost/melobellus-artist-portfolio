@@ -9,6 +9,7 @@ export default function Navbar() {
           Melobellus
         </a>
       </div>
+
       <div className={classes.links}>
         <ul className={classes.links_ul}>
           <li className={classes.links_li}>
@@ -35,6 +36,23 @@ export default function Navbar() {
             <Button text="Services"></Button>
           </li>
         </ul>
+      </div>
+      <div className={classes.menu}>
+        <svg
+          width="30"
+          height="22.5"
+          viewBox="0 0 18 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1 1H17M1 7H17M1 13H17"
+            stroke="#E7F1E5"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
       </div>
     </div>
   );
