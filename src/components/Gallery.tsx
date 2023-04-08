@@ -5,7 +5,7 @@ import Carousel from "./Carousel";
 import { useState } from "react";
 
 export default function Gallery() {
-  const [modalIsVisible, setModalIsVisible] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false);
   const [index, setIndex] = useState(null);
   const breakpointColumnsObj = {
     default: 4,
@@ -28,22 +28,22 @@ export default function Gallery() {
     "/10.png",
   ];
 
-  function showModalHandler(e: any) {
-    setModalIsVisible(true);
+  function showHandler(e: any) {
+    setModalVisible(true);
     const clickedIndex: any = parseInt(e.target.getAttribute("alt"));
     setIndex(clickedIndex);
   }
 
-  function hideModalHandler(e: any) {
+  function hideHandler(e: any) {
     e.stopPropagation();
-    setModalIsVisible(false);
+    setModalVisible(false);
   }
   return (
     <div id="gallery" className={classes.gallery}>
       <h2 className={classes.title}>Gallery</h2>
-      {modalIsVisible && (
-        <Modal>
-          <Carousel currentNum={index} onClose={hideModalHandler} />
+      {modalVisible && (
+        <Modal onClose={hideHandler}>
+          <Carousel currentNum={index} />
         </Modal>
       )}
 
@@ -54,7 +54,7 @@ export default function Gallery() {
       >
         {imgUrls.map((imgUrl) => {
           return (
-            <div className={classes.image_container} onClick={showModalHandler}>
+            <div className={classes.image_container} onClick={showHandler}>
               <img
                 key={imgUrls.indexOf(imgUrl)}
                 className={classes.art}

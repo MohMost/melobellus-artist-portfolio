@@ -2,10 +2,32 @@ import { useState } from "react";
 import Navbar from "./Navbar";
 import classes from "./Header.module.css";
 import Button from "./Button";
+import Modal from "./Modal";
+import Contact from "./Contact";
 
 export default function Header() {
+  const [modalIsVisible, setModalIsVisible] = useState(false);
+
+  function showModalHandler(e: any) {
+    setModalIsVisible(true);
+  }
+  function hideModalHandler(e: any) {
+    setModalIsVisible(false);
+  }
   return (
     <header className={classes.header}>
+      {modalIsVisible && (
+        <Modal onClose={hideModalHandler}>
+          <Contact />
+          <div>
+            <p className={classes.paragraph}>Or call to:</p>
+            <a className={classes.phone_mail_container} href="tel:123-456-7890">
+              <img src="/phone.svg" alt="" />
+              <span className={classes.phone_mail}>+213 697 378 584</span>
+            </a>
+          </div>
+        </Modal>
+      )}
       <Navbar />
 
       <div className={classes.banner}>
@@ -35,7 +57,7 @@ export default function Header() {
             </a>
           </section>
           <section className={classes.button_container}>
-            <Button text="Hire Me" />
+            <Button event={showModalHandler} text="Hire Me" />
           </section>
         </div>
       </div>

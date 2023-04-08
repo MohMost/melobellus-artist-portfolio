@@ -1,4 +1,3 @@
-import { useState } from "react";
 import classes from "./Navbar.module.css";
 import Button from "./Button";
 export default function Navbar() {

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import classes from "./Carousel.module.css";
 
-function Carousel({ currentNum }: any) {
+function Carousel({ onClose, currentNum }: any) {
   const [CurrentImage, setCurrentImage] = useState(currentNum);
   const imgUrls = [
     "/2.png",
