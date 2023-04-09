@@ -10,9 +10,11 @@ export default function Header() {
 
   function showModalHandler(e: any) {
     setModalIsVisible(true);
+    document.body.classList.toggle("no-scroll");
   }
   function hideModalHandler(e: any) {
     setModalIsVisible(false);
+    document.body.classList.toggle("no-scroll");
   }
   return (
     <header className={classes.header}>

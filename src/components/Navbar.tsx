@@ -1,42 +1,61 @@
 import classes from "./Navbar.module.css";
 import Button from "./Button";
+import Modal from "./Modal";
+import { useState } from "react";
 export default function Navbar() {
+  const [modalIsVisible, setModalIsVisible] = useState(false);
+
+  function showModalHandler(e: any) {
+    setModalIsVisible(true);
+    document.body.classList.toggle("no-scroll");
+  }
+  function hideModalHandler(e: any) {
+    setModalIsVisible(false);
+    document.body.classList.toggle("no-scroll");
+  }
+  const links = (
+    <ul className={classes.links_ul}>
+      <li className={classes.links_li}>
+        <a className={classes.links_a} href="#">
+          Home
+        </a>
+      </li>
+      <li className={classes.links_li}>
+        <a className={classes.links_a} href="#about">
+          About
+        </a>
+      </li>
+      <li className={classes.links_li}>
+        <a className={classes.links_a} href="#contact">
+          Contact
+        </a>
+      </li>
+      <li className={classes.links_li}>
+        <a className={classes.links_a} href="#gallery">
+          Gallery
+        </a>
+      </li>
+      <li className={classes.links_li}>
+        <Button text="Services"></Button>
+      </li>
+    </ul>
+  );
   return (
     <div className={classes.navbar}>
+      {modalIsVisible && (
+        <Modal onClose={hideModalHandler}>
+          <div className={classes.links_container}>{links}</div>
+        </Modal>
+      )}
+
       <div className={classes.logo}>
         <a className={classes.logo_a} href="#">
           Melobellus
         </a>
       </div>
 
-      <div className={classes.links}>
-        <ul className={classes.links_ul}>
-          <li className={classes.links_li}>
-            <a className={classes.links_a} href="#">
-              Home
-            </a>
-          </li>
-          <li className={classes.links_li}>
-            <a className={classes.links_a} href="#about">
-              About
-            </a>
-          </li>
-          <li className={classes.links_li}>
-            <a className={classes.links_a} href="#contact">
-              Contact
-            </a>
-          </li>
-          <li className={classes.links_li}>
-            <a className={classes.links_a} href="#gallery">
-              Gallery
-            </a>
-          </li>
-          <li className={classes.links_li}>
-            <Button text="Services"></Button>
-          </li>
-        </ul>
-      </div>
-      <div className={classes.menu}>
+      <div className={classes.links}>{links}</div>
+      <div onClick={showModalHandler} className={classes.menu}>
         <svg
           width="30"
           height="22.5"

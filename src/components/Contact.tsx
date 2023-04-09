@@ -30,7 +30,7 @@ export default function Contact(props: any) {
           },
           (error: { text: any }) => {
             alert(
-              "❌ | it seem there was an error if you couldent send the message contact me at this adress : mostefai147@gmail.com"
+              "❌ | it seem there was an error if you couldn't send the message contact me at this address : mostefai147@gmail.com"
             );
             setPopUpState("error");
           }

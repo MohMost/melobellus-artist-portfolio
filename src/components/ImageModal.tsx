@@ -1,4 +1,4 @@
-import classes from "./Modal.module.css";
+import classes from "./ImageModal.module.css";
 
 function Modal({ children, onClose }: any) {
   return (

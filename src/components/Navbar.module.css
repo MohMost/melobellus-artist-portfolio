@@ -6,6 +6,22 @@
   position: relative;
   padding: 3rem 10% 0 10%;
 }
+.links_container {
+  width: 25rem;
+}
+.links_container .links_ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 3rem;
+}
+.links_container .links_ul .links_li {
+  margin: 2rem;
+}
+.links_container .links_ul .links_a {
+  font-size: 1.5rem;
+}
 .links_ul {
   display: flex;
   align-items: center;
@@ -51,7 +67,9 @@
 }
 .menu {
   display: none;
+  cursor: pointer;
 }
+
 @media screen and (max-width: 1330px) {
   .links_li {
     margin: 0 2rem;
@@ -66,12 +84,17 @@
   }
 }
 @media screen and (max-width: 960px) {
-  .links_ul {
+  .links {
     display: none;
   }
   .menu {
     display: flex;
     position: relative;
     display: inline-block;
+  }
+}
+@media screen and (max-width: 410px) {
+  .links_container {
+    width: 20rem;
   }
 }

@@ -1,12 +1,12 @@
 import classes from "./Gallery.module.css";
 import Masonry from "react-masonry-css";
-import Modal from "./Modal";
+import Modal from "./ImageModal";
 import Carousel from "./Carousel";
 import { useState } from "react";
 
 export default function Gallery() {
   const [modalVisible, setModalVisible] = useState(false);
-  const [index, setIndex] = useState(null);
+  const [index, setIndex] = useState(0);
   const breakpointColumnsObj = {
     default: 4,
     1300: 3,
@@ -32,11 +32,13 @@ export default function Gallery() {
     setModalVisible(true);
     const clickedIndex: any = parseInt(e.target.getAttribute("alt"));
     setIndex(clickedIndex);
+    document.body.classList.toggle("no-scroll");
   }
 
   function hideHandler(e: any) {
     e.stopPropagation();
     setModalVisible(false);
+    document.body.classList.toggle("no-scroll");
   }
   return (
     <div id="gallery" className={classes.gallery}>
