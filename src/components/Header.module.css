@@ -130,6 +130,14 @@
   color: #9dff8d;
   text-decoration: underline;
 }
+@media screen and (max-height: 862px) {
+  .banner_h1 {
+    font-size: 4rem;
+  }
+  .banner_illustration {
+    width: 27rem;
+  }
+}
 @media screen and (max-width: 1460px) {
   .banner_h1 {
     font-size: 4rem;
