@@ -36,6 +36,7 @@ export default function Header() {
         <h1 className={classes.banner_h1}>
           Designer, illustrator, art teacher
         </h1>
+
         <img
           className={classes.banner_illustration}
           src="/banner_illustration.png"

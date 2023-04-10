@@ -130,12 +130,28 @@
   color: #9dff8d;
   text-decoration: underline;
 }
-@media screen and (max-height: 862px) {
+
+@media screen and (max-height: 709px) {
+  .button_icon {
+    width: 40% !important;
+  }
+  .ul {
+    width: 80%;
+  }
   .banner_h1 {
-    font-size: 4rem;
+    font-size: 3rem !important;
+    margin: 0 !important;
+  }
+  .banner {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    margin: 0 !important;
   }
   .banner_illustration {
-    width: 27rem;
+    display: none !important;
   }
 }
 @media screen and (max-width: 1460px) {
