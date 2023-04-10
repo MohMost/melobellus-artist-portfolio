@@ -23,7 +23,7 @@ export default function About() {
             pour en savoir plus sur moi voici mon cv:
           </p>
           <a
-            href="https://firebasestorage.googleapis.com/v0/b/mohameto-ddd57.appspot.com/o/gallery%2FLionel%20Galand%20(1979)%20-%20Langue%20et%20Litt%C3%A9rature%20Berb%C3%A8res%20%20Vingt%20cinq%20ans%20d%E2%80%99%C3%A9tudes.pdf?alt=media&token=4660221e-4747-423d-9fac-def07a83d6bc"
+            href="https://firebasestorage.googleapis.com/v0/b/mohameto-ddd57.appspot.com/o/gallery%2Funnamed.png?alt=media&token=6769041d-cf44-4e1b-859a-11dbd05fbde4"
             className={classes.button_container}
             target="_blank"
           >

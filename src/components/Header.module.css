@@ -139,21 +139,24 @@
     width: 80%;
   }
   .banner_h1 {
+    width: 60%;
     font-size: 3rem !important;
     margin: 0 !important;
   }
   .banner {
     display: flex;
-    flex-direction: row !important;
+    flex-direction: column !important;
     justify-content: center;
     align-items: center;
     height: 60%;
+    width: 60%;
     margin: 0 !important;
   }
   .banner_illustration {
-    display: none !important;
+    width: 21rem !important;
   }
 }
+
 @media screen and (max-width: 1460px) {
   .banner_h1 {
     font-size: 4rem;
