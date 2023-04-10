@@ -7,19 +7,6 @@ interface CarouselProps {
 
 function Carousel({ currentNum }: CarouselProps) {
   const [currentImage, setCurrentImage] = useState<any>(currentNum);
-  const imgUrls: string[] = [
-    "/2.png",
-    "image.png",
-    "/1.jpg",
-    "/3.jpg",
-    "/4.jpg",
-    "/5.jpg",
-    "/9.png",
-    "/7.jpg",
-    "/8.jpg",
-    "/6.jpg",
-    "/10.png",
-  ];
 
   useEffect(() => {
     setCurrentImage(currentNum);
@@ -29,7 +16,7 @@ function Carousel({ currentNum }: CarouselProps) {
     <div className={classes.carousel}>
       <img
         className={classes.image}
-        src={imgUrls[currentImage]}
+        src={currentImage}
         alt=""
         onClick={(e) => e.stopPropagation()}
       />

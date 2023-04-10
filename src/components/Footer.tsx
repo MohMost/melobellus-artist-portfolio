@@ -5,7 +5,6 @@ export default function Footer() {
   return (
     <footer className={classes.footer}>
       <svg
-        className={classes.arrow_container}
         width="100%"
         height="130"
         viewBox="0 0 1440 70"
@@ -23,7 +22,7 @@ export default function Footer() {
           fill="#DEFFEB"
           mask="url(#path-1-inside-1_65_21)"
         />
-        <a href="#">
+        <a className={classes.arrow_container} href="#">
           <rect
             x="748.586"
             y="30"
@@ -46,14 +45,18 @@ export default function Footer() {
         <div className={classes.row2}>
           <div className={classes.contacts}>
             <a className={classes.phone_mail_container} href="tel:123-456-7890">
-              <img src="/phone.svg" alt="" />
+              <img
+                className={classes.phone_mail_icon}
+                src="/phone.svg"
+                alt=""
+              />
               <span className={classes.phone_mail}>+213 697 378 584</span>
             </a>
             <a
               className={classes.phone_mail_container}
               href="mailto:mostefai147@gmail.com"
             >
-              <img src="/mail.svg" alt="" />
+              <img className={classes.phone_mail_icon} src="/mail.svg" alt="" />
               <span className={classes.phone_mail}>mostefai147@gmail.com</span>
             </a>
           </div>

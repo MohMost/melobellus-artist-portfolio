@@ -1,60 +1,42 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import classes from "./Contact.module.css";
 import Button from "./Button";
-import emailjs from "@emailjs/browser";
-
-export default function Contact(props: any) {
+import sendEmail from "./utils/emailSender";
+import EmailChecker from "./EmailChecker";
+export default function Contact() {
   const form = useRef<HTMLFormElement>(null);
-  const [popUpState, setPopUpState] = useState("");
+  const [popUpState, setPopUpState] = useState(false);
   const [isToggled, setIsToggled] = useState(false);
-  let message = "";
-  const toggleClass = () => {
-    setIsToggled(true);
-    console.log(isToggled);
-  };
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const [errorIsVisible, setErrorIsVisible] = useState(false);
+  const [inputValue, setInputValue] = useState("");
 
-    if (form.current) {
-      emailjs
-        .sendForm(
-          "service_gkt1f2n",
-          "template_9vm4zc6",
-          form.current,
-          "Xo4-e87CZFWltdmgi"
-        )
-        .then(
-          (result: { text: any }) => {
-            alert("✅ | The message was sent");
-            setPopUpState("success");
-          },
-          (error: { text: any }) => {
-            alert(
-              "❌ | it seem there was an error if you couldn't send the message contact me at this address : mostefai147@gmail.com"
-            );
-            setPopUpState("error");
-          }
-        );
+  function toggleClass() {
+    if (inputValue) {
+      setIsToggled(!isToggled);
+    } else {
+      setIsToggled(false);
     }
-  };
-  const html = (
-    <div className={classes.alert}>
-      <span className="fas fa-exclamation-circle"></span>
-      <span className="msg">Warning: This is a warning alert!</span>
-      <div className="close-btn">
-        <span className="fas fa-times"></span>
-      </div>
-    </div>
-  );
+  }
+
   return (
     <div id="contact" className={classes.contact}>
-      <form ref={form} className={classes.form} onSubmit={sendEmail}>
-        <h2 className={classes.title}>Contact Me</h2>
+      <form
+        ref={form}
+        className={classes.form}
+        onSubmit={(e) => sendEmail([e, form, setPopUpState, setErrorIsVisible])}
+      >
+        <div className={classes.title_container}>
+          <img src="./star.svg" alt="" />
+          <h2 className={classes.title}>Contact Me</h2>
+          <img src="./star.svg" alt="" />
+        </div>
+
         <input
           id={classes.name}
           type="text"
           name="user_name"
           placeholder="Your/Company name..."
+          onChange={(e) => setInputValue(e.target.value)}
         />
         <input
           type="email"
@@ -62,6 +44,7 @@ export default function Contact(props: any) {
           id={classes.phone}
           placeholder="Your Adress..."
           required
+          onChange={(e) => setInputValue(e.target.value)}
         />
 
         <textarea
@@ -69,11 +52,18 @@ export default function Contact(props: any) {
           rows={12}
           name="message"
           placeholder="Your Message..."
+          onChange={(e) => setInputValue(e.target.value)}
         ></textarea>
 
         <div className={classes.button_container}>
           <Button type="submit" text="Send" event={toggleClass} />
         </div>
+        <EmailChecker
+          upState={popUpState}
+          toggled={isToggled}
+          error={errorIsVisible}
+          input={inputValue}
+        />
       </form>
     </div>
   );

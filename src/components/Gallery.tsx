@@ -2,11 +2,17 @@ import classes from "./Gallery.module.css";
 import Masonry from "react-masonry-css";
 import Modal from "./ImageModal";
 import Carousel from "./Carousel";
-import { useState } from "react";
-
+import { useEffect, useState, useRef, Suspense } from "react";
+import { storage } from "./utils/firebase-config";
+import { ref, listAll, getDownloadURL } from "firebase/storage";
+import { color } from "framer-motion";
+import Images from "./utils/Images";
 export default function Gallery() {
+  const dataFetchedRef = useRef(false);
   const [modalVisible, setModalVisible] = useState(false);
   const [index, setIndex] = useState(0);
+  const [imagesAreDisplayed, setImagesAreDisplayed] = useState<any>([]);
+
   const breakpointColumnsObj = {
     default: 4,
     1300: 3,
@@ -14,23 +20,9 @@ export default function Gallery() {
     700: 1,
   };
 
-  const imgUrls = [
-    "/2.png",
-    "image.png",
-    "/1.jpg",
-    "/3.jpg",
-    "/4.jpg",
-    "/5.jpg",
-    "/9.png",
-    "/7.jpg",
-    "/8.jpg",
-    "/6.jpg",
-    "/10.png",
-  ];
-
   function showHandler(e: any) {
     setModalVisible(true);
-    const clickedIndex: any = parseInt(e.target.getAttribute("alt"));
+    const clickedIndex: any = e.target.getAttribute("src");
     setIndex(clickedIndex);
     document.body.classList.toggle("no-scroll");
   }
@@ -42,32 +34,23 @@ export default function Gallery() {
   }
   return (
     <div id="gallery" className={classes.gallery}>
-      <h2 className={classes.title}>Gallery</h2>
+      <div className={classes.title_container}>
+        <img src="./star.svg" alt="" />
+        <h2 className={classes.title}>Gallery</h2>
+        <img src="./star.svg" alt="" />
+      </div>
+
       {modalVisible && (
         <Modal onClose={hideHandler}>
           <Carousel currentNum={index} />
         </Modal>
       )}
 
-      <Masonry
-        breakpointCols={breakpointColumnsObj}
-        className={classes.my_masonry_grid}
-        columnClassName={classes.my_masonry_grid_column}
+      <Suspense
+        fallback={<img className={classes.loading} src="/loading.svg" />}
       >
-        {imgUrls.map((imgUrl) => {
-          return (
-            <div className={classes.image_container} onClick={showHandler}>
-              <img
-                key={imgUrls.indexOf(imgUrl)}
-                className={classes.art}
-                width="100%"
-                src={imgUrl}
-                alt={`${imgUrls.indexOf(imgUrl)}`}
-              />
-            </div>
-          );
-        })}
-      </Masonry>
+        <Images clickEvent={showHandler} />
+      </Suspense>
     </div>
   );
 }

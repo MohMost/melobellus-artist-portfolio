@@ -5,7 +5,12 @@ export default function About() {
     <div id="about" className={classes.about}>
       <img className={classes.image} src="melobellus.png" alt="" />
       <div>
-        <h2 className={classes.title}>About us</h2>
+        <div className={classes.title_container}>
+          <img src="./star.svg" alt="" />
+          <h2 className={classes.title}>About us</h2>
+          <img src="./star.svg" alt="" />
+        </div>
+
         <p className={classes.content}>
           Un artiste et designer doué dans la création d'œuvres d'art numériques
           et traditionnelles, y compris l'aquarelle et la peinture à l'huile.

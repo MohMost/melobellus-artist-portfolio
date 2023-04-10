@@ -15,27 +15,27 @@ export default function Navbar() {
   }
   const links = (
     <ul className={classes.links_ul}>
-      <li className={classes.links_li}>
+      <li onClick={hideModalHandler} className={classes.links_li}>
         <a className={classes.links_a} href="#">
           Home
         </a>
       </li>
-      <li className={classes.links_li}>
+      <li onClick={hideModalHandler} className={classes.links_li}>
         <a className={classes.links_a} href="#about">
           About
         </a>
       </li>
-      <li className={classes.links_li}>
+      <li onClick={hideModalHandler} className={classes.links_li}>
         <a className={classes.links_a} href="#contact">
           Contact
         </a>
       </li>
-      <li className={classes.links_li}>
+      <li onClick={hideModalHandler} className={classes.links_li}>
         <a className={classes.links_a} href="#gallery">
           Gallery
         </a>
       </li>
-      <li className={classes.links_li}>
+      <li onClick={hideModalHandler} className={classes.links_li}>
         <Button text="Services"></Button>
       </li>
     </ul>
@@ -54,7 +54,34 @@ export default function Navbar() {
         </a>
       </div>
 
-      <div className={classes.links}>{links}</div>
+      <div className={classes.links}>
+        {" "}
+        <ul className={classes.links_ul}>
+          <li className={classes.links_li}>
+            <a className={classes.links_a} href="#">
+              Home
+            </a>
+          </li>
+          <li className={classes.links_li}>
+            <a className={classes.links_a} href="#about">
+              About
+            </a>
+          </li>
+          <li className={classes.links_li}>
+            <a className={classes.links_a} href="#contact">
+              Contact
+            </a>
+          </li>
+          <li className={classes.links_li}>
+            <a className={classes.links_a} href="#gallery">
+              Gallery
+            </a>
+          </li>
+          <li className={classes.links_li}>
+            <Button text="Services"></Button>
+          </li>
+        </ul>
+      </div>
       <div onClick={showModalHandler} className={classes.menu}>
         <svg
           width="30"

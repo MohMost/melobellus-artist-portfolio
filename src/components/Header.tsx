@@ -54,7 +54,7 @@ export default function Header() {
             <a href="">
               <img className={classes.li} src="/facebook.svg" alt="facebook" />
             </a>
-            <a href="https://www.behance.net/Magikaarp">
+            <a href="https://www.behance.net/Magikaarp" target="_blank">
               <img className={classes.li} src="/behance.svg" alt="behance" />
             </a>
           </section>
@@ -80,7 +80,7 @@ export default function Header() {
             fill="#DEFFEB"
             mask="url(#path-1-inside-1_135_10)"
           />
-          <a href="#gallery">
+          <a className={classes.arrow_container} href="#gallery">
             <rect
               x="691.414"
               y="30"

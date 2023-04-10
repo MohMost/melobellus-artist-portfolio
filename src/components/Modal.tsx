@@ -14,21 +14,23 @@ function Modal({ children, onClose }: any) {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <circle
-            cx="25"
-            cy="25"
-            r="24"
-            fill="#21073C"
-            stroke="#DEFFEB"
-            stroke-width="2"
-          />
-          <path
-            d="M14 36L25.5 24.5L37 36M37 13L25.4978 24.5L14 13"
-            stroke="#DEFFEB"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
+          <a className={classes.cancel_icon} href="#">
+            <circle
+              cx="25"
+              cy="25"
+              r="24"
+              fill="#21073C"
+              stroke="#DEFFEB"
+              stroke-width="3"
+            />
+            <path
+              d="M14 36L25.5 24.5L37 36M37 13L25.4978 24.5L14 13"
+              stroke="#DEFFEB"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </a>
         </svg>
 
         {children}
