@@ -44,13 +44,16 @@ export default function Footer() {
         <h2 className={classes.row1}>Melobellus</h2>
         <div className={classes.row2}>
           <div className={classes.contacts}>
-            <a className={classes.phone_mail_container} href="tel:123-456-7890">
+            <a
+              className={classes.phone_mail_container}
+              href="tel:+213-673-381-769"
+            >
               <img
                 className={classes.phone_mail_icon}
                 src="/phone.svg"
                 alt=""
               />
-              <span className={classes.phone_mail}>+213 697 378 584</span>
+              <span className={classes.phone_mail}>+213 673 381 769</span>
             </a>
             <a
               className={classes.phone_mail_container}

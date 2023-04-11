@@ -11,7 +11,7 @@ export default function sendEmail([
   if (form.current) {
     emailjs
       .sendForm(
-        "servicegkt1f2n",
+        "service_gkt1f2n",
         "template_9vm4zc6",
         form.current,
         "Xo4-e87CZFWltdmgi"

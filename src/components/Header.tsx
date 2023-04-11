@@ -23,9 +23,16 @@ export default function Header() {
           <Contact />
           <div>
             <p className={classes.paragraph}>Or call to:</p>
-            <a className={classes.phone_mail_container} href="tel:123-456-7890">
-              <img src="/phone.svg" alt="" />
-              <span className={classes.phone_mail}>+213 697 378 584</span>
+            <a
+              className={classes.phone_mail_container}
+              href="tel:+213-673-381-769"
+            >
+              <img
+                className={classes.phone_mail_icon}
+                src="/phone.svg"
+                alt=""
+              />
+              <span className={classes.phone_mail}>+213 673 381 769</span>
             </a>
           </div>
         </Modal>
