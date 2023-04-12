@@ -3,10 +3,10 @@ import Masonry from "react-masonry-css";
 import Modal from "./ImageModal";
 import Carousel from "./Carousel";
 import { useEffect, useState, useRef, Suspense } from "react";
-import { storage } from "./utils/firebase-config";
+import { storage } from "../utils/firebase-config";
 import { ref, listAll, getDownloadURL } from "firebase/storage";
 import { color } from "framer-motion";
-import Images from "./utils/Images";
+import Images from "./Images";
 export default function Gallery() {
   const dataFetchedRef = useRef(false);
   const [modalVisible, setModalVisible] = useState(false);

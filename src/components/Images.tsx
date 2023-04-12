@@ -1,6 +1,6 @@
 import React from "react";
-import getImages from "./fetchData";
-import classes from "../Gallery.module.css";
+import getImages from "../utils/fetchData";
+import classes from "./Gallery.module.css";
 import Masonry from "react-masonry-css";
 const resource = getImages("gallery/illustration/");
 

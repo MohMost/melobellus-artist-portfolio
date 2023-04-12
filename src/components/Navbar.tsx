@@ -92,7 +92,7 @@ export default function Navbar() {
         >
           <path
             d="M1 1H17M1 7H17M1 13H17"
-            stroke="#E7F1E5"
+            stroke="#e7f1e5"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"

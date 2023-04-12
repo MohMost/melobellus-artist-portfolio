@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import classes from "./Contact.module.css";
 import Button from "./Button";
-import sendEmail from "./utils/emailSender";
+import sendEmail from "../utils/emailSender";
 import EmailChecker from "./EmailChecker";
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null);

@@ -140,8 +140,9 @@
   }
   .banner_h1 {
     width: 60%;
-    font-size: 3rem !important;
+    font-size: 2.5rem !important;
     margin: 0 !important;
+    text-align: center;
   }
   .banner {
     display: flex;
@@ -155,9 +156,19 @@
   .banner_illustration {
     width: 21rem !important;
   }
+  .button_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 1460px) {
+  .button_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .banner_h1 {
     font-size: 4rem;
   }
@@ -172,7 +183,7 @@
   .banner_h1 {
     text-align: center;
     width: 50%;
-    padding-bottom: 5%;
+    padding-bottom: 0;
     margin-left: 0;
     margin-top: 0;
   }
@@ -182,6 +193,7 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    width: 100%;
     padding-bottom: 30%;
   }
   .ul {
@@ -211,5 +223,8 @@
   }
   .li {
     width: 3rem;
+  }
+  .banner {
+    width: 100%;
   }
 }

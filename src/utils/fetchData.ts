@@ -7,8 +7,16 @@ function getImages(Ref: string): { read: () => string[] } {
   const promise = listAll(imagesRef).then((imageList) => {
     return Promise.all(
       imageList.items.map(async (item) => {
-        const url = await getDownloadURL(item);
-        return url;
+        try {
+          const url = await getDownloadURL(item);
+          return url;
+        } catch (err: any) {
+          console.error(
+            `Error getting download URL for image: ${item.name}`,
+            err
+          );
+          throw err;
+        }
       })
     );
   });
